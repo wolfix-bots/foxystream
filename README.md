@@ -1,12 +1,28 @@
-# FoxyStream 🦊
+# 🦊 FoxyStream — Render Deploy
 
-FOXYTECH movie streaming site — pre-built React app served via Node.js.
+> **Production-ready static build** of FoxyStream. Deploy this repo directly on Render — no build step required.
 
-## Deploy on Render
+## What is this?
+This is the pre-compiled `dist/` output of [cyber-stream-foxy](https://github.com/wolfix-bots/cyber-stream-foxy) served by a lightweight Express server (`server.mjs`).
 
-- Type: **Web Service**
-- Runtime: **Node**
-- Build command: *(leave blank)*
-- Start command: `node server.mjs`
+## Deploy on Render (Web Service)
 
-No build step needed — the `dist/` folder is already included.
+| Setting | Value |
+|---|---|
+| **Build Command** | `yarn` |
+| **Start Command** | `yarn start` |
+| **Node Version** | 18+ |
+| **Environment** | `PORT` is set automatically by Render |
+
+> No additional env vars required. The app calls xcasper directly from the browser.
+
+## Update the Build
+When [cyber-stream-foxy](https://github.com/wolfix-bots/cyber-stream-foxy) has new changes:
+```bash
+cd cyber-stream-foxy && npm run build
+cp -r dist/ ../foxystream/dist/
+cd ../foxystream && git add dist/ && git commit -m "rebuild" && git push
+```
+
+---
+**Maintained by Foxy Tech** · Powered by Casper Tech Kenya
