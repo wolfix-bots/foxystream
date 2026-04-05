@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: foxystream
+    env: node
+    buildCommand: ""
+    startCommand: node server.mjs

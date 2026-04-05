@@ -1,0 +1,13 @@
+{
+  "name": "foxystream",
+  "version": "1.0.0",
+  "description": "FoxyStream — FOXYTECH movie streaming (pre-built React app, node server)",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
